@@ -1,0 +1,15 @@
+.jumbotron {
+    background-image:url(../../images/Main1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    margin-top: 20px;
+    margin-bottom: 60px;
+
+}
+
+p {
+    display: block;
+    color: darkslategrey;
+    font-family: "Arial Hebrew";
+}
