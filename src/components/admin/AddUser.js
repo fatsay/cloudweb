@@ -142,7 +142,7 @@ class AddUser extends Component {
                         </Col>
                     </Row>
                     {this.state.message.length>0 &&
-                    <Alert variant="success">
+                    <Alert dismissible variant="success">
                         <Alert.Heading>Message!</Alert.Heading>
                         <hr />
                         <p>
@@ -151,6 +151,7 @@ class AddUser extends Component {
                     </Alert>
                     }
                     <Button
+                        variant='success'
                         block
                         disabled={!this.validateForm()}
                         type="submit"

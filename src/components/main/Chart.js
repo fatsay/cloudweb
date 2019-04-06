@@ -14,10 +14,14 @@ class LineChart extends Component {
             >
                 <Chart
                     data={this.props.data}
+                    series={{
+                        showPoints:true
+                    }}
                     axes={[
-                        { primary: true, type: "linear", position: "bottom" },
+                        { primary: true, type: "ordinal", position: "bottom" },
                         { type: "linear", position: "left" }
                     ]}
+                    tooltip
                 />
             </div>
         );

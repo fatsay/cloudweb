@@ -11,10 +11,9 @@ class MyPageDoctor extends Component {
         this.state = {
             user:null,
             authenticated:false,
-            loading:true
+            loading:false
         };
     }
-
     componentDidMount() {
         const user=Firebase.auth().currentUser;
         if (user) {
@@ -34,7 +33,6 @@ class MyPageDoctor extends Component {
             this.props.history.push('/')
         }
     }
-
     render() {
         const {loading}=this.state;
         if(loading){

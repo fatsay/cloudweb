@@ -1,24 +1,23 @@
 import React, {Component} from 'react';
 import {Link} from "react-router-dom";
+import Logo from "../../images/Logo1.png";
 
 class NavBar extends Component {
     render() {
         return (
-            <nav className="navbar navbar-toggleable-md navbar-inverse bg-primary">
-                <button className="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
-                        data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false"
-                        aria-label="Toggle navigation">
-                    <span className="navbar-toggler-icon"/>
-                </button>
+            <nav className="navbar navbar-inverse bg-inverse navbar-toggleable-md">
+                <img src={Logo} alt="img"/>
                 <div className="container">
-                    <Link className="navbar-brand" to="/">Home<span className="sr-only">(current)</span></Link>
-                    <div className="collapse navbar-collapse" id="navbarColor02">
+                    <div className="collapse navbar-collapse" id="navbarColor03">
                         <ul className="navbar-nav ml-auto">
                             <li className="nav-item">
-                                <Link className="nav-link" to="/signin">Sign in</Link>
+                                <Link className="nav-link" to="/">Home <span className="sr-only">(current)</span></Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" to="/signup">Sign up</Link>
+                                <Link className="nav-link" to="/signIn">Sign in</Link>
+                            </li>
+                            <li className="nav-item">
+                                <Link className="nav-link" to="/signUp">Sign up</Link>
                             </li>
                         </ul>
                     </div>

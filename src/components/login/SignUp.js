@@ -52,8 +52,10 @@ class SignUp extends Component {
                 headers: {
                     'Content-Type': 'application/json; charset=utf-8',
                 }
-            }
-            ).catch(error => {
+            }).then(resp => {
+           this.props.history.push('/')
+        }
+    ).catch(error => {
             this.setState({isValid:"false"});
             this.setState({error:error.toString()});
             console.log(error)
@@ -139,7 +141,7 @@ class SignUp extends Component {
                             </Col>
                         </Row>
                         {this.state.isValid === "false" &&
-                        <Alert variant="warning">
+                        <Alert dismissible variant="warning">
                             <Alert.Heading>You got an error!</Alert.Heading>
                             <hr/>
                             <p>
@@ -148,6 +150,7 @@ class SignUp extends Component {
                         </Alert>
                         }
                         <Button
+                            variant='success'
                             block
                             disabled={!this.validateForm()}
                             type="submit"

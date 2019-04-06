@@ -66,6 +66,7 @@ class SignIn extends Component {
                             this.props.history.push( '/myPage/admin')
                         }
                     })
+
                 ).catch(error => {
                     this.setState({error: error.toString()});
                 });
@@ -101,7 +102,7 @@ class SignIn extends Component {
                         />
                     </FormGroup>
                     {this.state.isValid==="false" &&
-                    <Alert variant="warning">
+                    <Alert dismissible variant="warning">
                         <Alert.Heading>You got an error!</Alert.Heading>
                         <hr />
                         <p>
@@ -110,6 +111,7 @@ class SignIn extends Component {
                     </Alert>
                     }
                     <Button
+                        variant='success'
                         block
                         disabled={!this.validateForm()}
                         type="submit"

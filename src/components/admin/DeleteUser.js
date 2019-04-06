@@ -84,7 +84,7 @@ class DeleteUser extends Component {
                         </FormControl>
                     </FormGroup>
                     {this.state.message.length>0 &&
-                    <Alert variant="success">
+                    <Alert dismissible variant="success">
                         <Alert.Heading>Message!</Alert.Heading>
                         <hr />
                         <p>
@@ -93,6 +93,7 @@ class DeleteUser extends Component {
                     </Alert>
                     }
                     <Button
+                        variant='success'
                         block
                         disabled={!this.validateForm()}
                         type="submit"
